@@ -11,8 +11,8 @@ export default class Sample extends React.Component {
   render() {
     return (
       <>
-        <h1>{ this.state.example }</h1>
-        <h2>{ this.props.someProp }</h2>
+        <h1>{this.state.example}</h1>
+        <h2>{this.props.someProp}</h2>
       </>
     );
   }
