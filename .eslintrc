@@ -4,6 +4,11 @@
     "node": true,
     "browser": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "plugin:react/recommended",
     "eslint:recommended",
@@ -65,11 +70,6 @@
       "files": [
         "**/*.jsx"
       ],
-      "settings": {
-        "react": {
-          "version": "detect"
-        }
-      },
       "rules": {
         "react/prop-types": "off",
         "react/jsx-curly-brace-presence": [
