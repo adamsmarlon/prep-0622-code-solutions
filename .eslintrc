@@ -24,6 +24,13 @@
       "error",
       "multi-line"
     ],
+    "no-restricted-globals": [
+      "error",
+      {
+        "name": "event",
+        "message": "Listener function's event parameter is missing."
+      }
+    ],
     "no-console": [
       "error",
       {
