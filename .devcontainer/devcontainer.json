@@ -1,0 +1,117 @@
+{
+  "name": "in-a-container",
+  "image": "thebearingedge/code-container",
+  "mounts": [
+    // get access to the host docker daemon
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+    // mount Git configuration
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/dev/.gitconfig,type=bind"
+  ],
+  "containerEnv": {
+    "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
+  },
+  "appPort": [
+    3000,
+    8081,
+    35729
+  ],
+  "extensions": [
+    "thebearingedge.lfz-code"
+  ],
+  "remoteUser": "dev",
+  "postCreateCommand": "test -f package-lock.json && npm ci",
+  "settings": {
+    "css.validate": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    },
+    "editor.fontFamily": "Menlo, Monaco, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": false,
+    "editor.overviewRulerBorder": true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+      80
+    ],
+    "editor.snippetSuggestions": "none",
+    "editor.tabSize": 2,
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.run": "onType",
+    "eslint.validate": [
+      "javascript",
+      "javascript-react"
+    ],
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 0,
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+      ".eslintrc": "json",
+      ".htmlhintrc": "json",
+      ".sql": "plpgsql",
+      ".stylelintrc": "json"
+    },
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "javascript.suggest.autoImports": false,
+    "javascript.suggestionActions.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "javascript.validate.enable": false,
+    "less.validate": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "scss.validate": false,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "args": [
+          "--login"
+        ],
+        "icon": "terminal-bash",
+        "path": "/usr/bin/bash"
+      }
+    },
+    "terminal.integrated.tabs.enabled": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": false,
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#3c3c3c",
+      "statusBar.debuggingBackground": "#511f1f",
+      "statusBar.noFolderBackground": "#333333",
+      "terminal.ansiBlack": "#272822",
+      "terminal.ansiBlue": "#ae80fe",
+      "terminal.ansiBrightBlack": "#75715e",
+      "terminal.ansiBrightBlue": "#ae80fe",
+      "terminal.ansiBrightCyan": "#a1efe4",
+      "terminal.ansiBrightGreen": "#a6e22e",
+      "terminal.ansiBrightMagenta": "#f82a71",
+      "terminal.ansiBrightRed": "#f92672",
+      "terminal.ansiBrightWhite": "#f9f8f5",
+      "terminal.ansiBrightYellow": "#fd971e",
+      "terminal.ansiCyan": "#a1efe4",
+      "terminal.ansiGreen": "#a6e22e",
+      "terminal.ansiMagenta": "#f82a71",
+      "terminal.ansiRed": "#f92672",
+      "terminal.ansiWhite": "#f8f8f2",
+      "terminal.ansiYellow": "#fd971e",
+      "terminal.background": "#242424",
+      "terminal.foreground": "#f8f8f2",
+      "terminalCursor.background": "#f8f8f2",
+      "terminalCursor.foreground": "#f8f8f2"
+    },
+    "workbench.colorTheme": "Monokai Dark Soda",
+    "workbench.enableExperiments": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.startupEditor": "none"
+  }
+}
