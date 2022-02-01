@@ -1,5 +1,5 @@
 {
-  "name": "in-a-container",
+  "name": "code-solutions",
   "image": "thebearingedge/code-container",
   "mounts": [
     // get access to the host docker daemon
@@ -7,13 +7,14 @@
     // mount Git configuration
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/dev/.gitconfig,type=bind"
   ],
-  "containerEnv": {
-    "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
-  },
   "appPort": [
-    3000,
-    8081,
-    35729
+    80,    // apache/nginx
+    3000,  // node
+    5000,  // flask
+    8081,  // pgweb
+    9000,  // php-fpm
+    9229,  // node debugger
+    35729  // php-fpm
   ],
   "extensions": [
     "thebearingedge.lfz-code"
@@ -52,7 +53,7 @@
     "extensions.ignoreRecommendations": true,
     "files.associations": {
       ".eslintrc": "json",
-      ".htmlhintrc": "json",
+      ".markuplintrc": "json",
       ".sql": "plpgsql",
       ".stylelintrc": "json"
     },
@@ -71,9 +72,6 @@
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.profiles.linux": {
       "bash": {
-        "args": [
-          "--login"
-        ],
         "icon": "terminal-bash",
         "path": "/usr/bin/bash"
       }
@@ -83,32 +81,6 @@
     "window.restoreWindows": "none",
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
-    "workbench.colorCustomizations": {
-      "statusBar.background": "#3c3c3c",
-      "statusBar.debuggingBackground": "#511f1f",
-      "statusBar.noFolderBackground": "#333333",
-      "terminal.ansiBlack": "#272822",
-      "terminal.ansiBlue": "#ae80fe",
-      "terminal.ansiBrightBlack": "#75715e",
-      "terminal.ansiBrightBlue": "#ae80fe",
-      "terminal.ansiBrightCyan": "#a1efe4",
-      "terminal.ansiBrightGreen": "#a6e22e",
-      "terminal.ansiBrightMagenta": "#f82a71",
-      "terminal.ansiBrightRed": "#f92672",
-      "terminal.ansiBrightWhite": "#f9f8f5",
-      "terminal.ansiBrightYellow": "#fd971e",
-      "terminal.ansiCyan": "#a1efe4",
-      "terminal.ansiGreen": "#a6e22e",
-      "terminal.ansiMagenta": "#f82a71",
-      "terminal.ansiRed": "#f92672",
-      "terminal.ansiWhite": "#f8f8f2",
-      "terminal.ansiYellow": "#fd971e",
-      "terminal.background": "#242424",
-      "terminal.foreground": "#f8f8f2",
-      "terminalCursor.background": "#f8f8f2",
-      "terminalCursor.foreground": "#f8f8f2"
-    },
-    "workbench.colorTheme": "Monokai Dark Soda",
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.panel.defaultLocation": "right",
