@@ -14,7 +14,7 @@
     8081,  // pgweb
     9000,  // php-fpm
     9229,  // node debugger
-    35729  // php-fpm
+    35729  // livereload
   ],
   "extensions": [
     "thebearingedge.lfz-code"
