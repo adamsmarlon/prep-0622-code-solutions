@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "Launch Program",
+      "name": "Run with Node.js",
       "program": "${file}",
       "request": "launch",
       "skipFiles": [

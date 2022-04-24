@@ -4,6 +4,9 @@
     "node": true,
     "browser": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2015
+  },
   "settings": {
     "react": {
       "version": "detect"
@@ -20,7 +23,7 @@
       "error",
       "always"
     ],
-    "padded-blocks": 0,
+    "padded-blocks": "off",
     "arrow-parens": [
       "error",
       "as-needed"
