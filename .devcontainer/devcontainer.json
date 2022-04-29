@@ -1,9 +1,9 @@
 {
-  "name": "code-solutions",
+  "name": "${localWorkspaceFolderBasename}",
   "image": "thebearingedge/code-container",
   "mounts": [
     // share ssh config. remove this if you don't want to use a vscode user
-    "source=${localEnv:HOME}/.ssh,target=/home/dev/.ssh,type=bind",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/dev/.ssh,type=bind",
     // get access to the host docker daemon
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
     // mount Git configuration
@@ -21,7 +21,7 @@
   ],
   "remoteUser": "vscode",
   "containerUser": "vscode",
-  "postCreateCommand": "./.devcontainer/post-create-command.sh",
+  "postCreateCommand": "sh .devcontainer/post-create-command.sh",
   "settings": {
     "css.validate": false,
     "editor.codeActionsOnSave": {
@@ -62,6 +62,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "gitlense.codeLens.enabled": false,
     "javascript.suggest.autoImports": false,
     "javascript.suggestionActions.enabled": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
