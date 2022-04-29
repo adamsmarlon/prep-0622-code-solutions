@@ -7,23 +7,17 @@
   "parserOptions": {
     "ecmaVersion": 2015
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "extends": [
     "plugin:react/recommended",
     "eslint:recommended",
     "standard"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
-    "no-var": "off",
-    "semi": [
-      "error",
-      "always"
-    ],
-    "padded-blocks": "off",
     "arrow-parens": [
       "error",
       "as-needed"
@@ -31,13 +25,6 @@
     "curly": [
       "error",
       "multi-line"
-    ],
-    "no-restricted-globals": [
-      "error",
-      {
-        "name": "event",
-        "message": "Listener function's event parameter is missing."
-      }
     ],
     "no-console": [
       "error",
@@ -48,6 +35,15 @@
         ]
       }
     ],
+    "no-restricted-globals": [
+      "error",
+      {
+        "name": "event",
+        "message": "Listener function's event parameter is missing."
+      }
+    ],
+    "no-var": "off",
+    "padded-blocks": "off",
     "space-before-function-paren": [
       "error",
       {
@@ -55,6 +51,10 @@
         "named": "never",
         "asyncArrow": "always"
       }
+    ],
+    "semi": [
+      "error",
+      "always"
     ],
     "react/jsx-filename-extension": [
       "error"
