@@ -19,7 +19,7 @@ find . \( -type d -o -type f \) -exec sudo -u dev chmod g+w {} \;
 echo 'changing default file acl'
 sudo -u dev setfacl -Rm d:g:dev:rw .
 
-echo 'marking safe git repository'
+echo 'marking safe git repository for vscode user'
 git config --global safe.directory "$(pwd)"
 
 echo 'installing node_modules'

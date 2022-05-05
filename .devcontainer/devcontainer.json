@@ -2,7 +2,7 @@
   "name": "${localWorkspaceFolderBasename}",
   "image": "thebearingedge/code-container",
   "mounts": [
-    // share ssh config
+    // mount ssh config
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/dev/.ssh,type=bind",
     // mount git config
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/dev/.gitconfig,type=bind"
@@ -59,7 +59,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "gitlense.codeLens.enabled": false,
+    "gitlens.codeLens.enabled": false,
     "javascript.suggest.autoImports": false,
     "javascript.suggestionActions.enabled": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
