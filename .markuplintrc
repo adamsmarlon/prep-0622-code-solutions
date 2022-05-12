@@ -1,4 +1,7 @@
 {
+  "excludeFiles": [
+    "**/node_modules/**"
+  ],
   "rules": {
     "attr-duplication": true,
     "character-reference": true,
@@ -21,6 +24,26 @@
     "case-sensitive-tag-name": true,
     "indentation": 2
   },
+  "nodeRules": [
+    {
+      "selector": "link",
+      "rules": {
+        "character-reference": false
+      }
+    },
+    {
+      "selector": "img",
+      "rules": {
+        "character-reference": false
+      }
+    },
+    {
+      "selector": "a",
+      "rules": {
+        "character-reference": false
+      }
+    }
+  ],
   "childNodeRules": [
     {
       "selector": "html",
