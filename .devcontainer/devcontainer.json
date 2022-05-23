@@ -9,5 +9,8 @@
       ]
     }
   },
-  "postCreateCommand": "[ -f package-lock.json ] && npm ci"
+  "postCreateCommand": "[ -f package-lock.json ] && npm ci",
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  }
 }
