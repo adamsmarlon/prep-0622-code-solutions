@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Layout Classes</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    /* stylelint-disable block-no-empty */
+
+    body {
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 992px;
+      margin: auto;
+
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+
+    }
+
+    .column {
+      flex-basis: calc(100%/3);
+      padding-left: 8px;
+      padding-right: 8px;
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Complete the HTML here -->
+  <h1>Indiana Jones</h1>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <img src="../prep-css-layout-classes/images/crusade.jpg" alt="Indiana Jones Crusade" width="100">
+        <h3>Indiana Jones: The Last Crusade</h3>
+        <p> I'm not actually sure if we are supposed to look up the film, and give
+          an example written about the plot. Or if we were just supposed to copy
+          the short paragraph, in the example.</p>
+      </div>
+      <div class="column">
+        <img src="../prep-css-layout-classes/images/raiders.jpg" alt="Indiana Jones:Raiders of the Lost Ark" width="100">
+        <h3>Indiana Jones: Raiders of the Lost Ark</h3>
+        <p>Once again, I'm not sure if we were actually supposed to write our own plot summary by looking up the films
+          plot
+          Or if we were just supposed to put the plot summary that was in the example.</p>
+      </div>
+      <div class="column">
+        <img src="../prep-css-layout-classes/images/temple.jpg" alt="Indian Jones Temple" width="100">
+        <h3>Indiana Jones: Temple of Doom</h3>
+        <p>I think you got the point with the first two paragraphs. LOL</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
