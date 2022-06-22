@@ -4,14 +4,17 @@ body {
 
 button {
   background-color: red;
-  color: white;
   margin: 20px;
   padding: 10px;
+  border-style: double;
+  color: white;
+  border-color: white;
+  width: "3px";
 }
 
 /* 👇 YOUR CODE HERE 👇 */
-p.double {
+double-button {
   border-style: double;
   color: darkgray;
-  width: "3x";
+  width: "3px";
 }
