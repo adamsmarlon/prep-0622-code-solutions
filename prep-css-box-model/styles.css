@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+}
+
+button {
+  background-color: red;
+  margin: 20px;
+  padding: 10px;
+  border-style: double;
+  color: white;
+  border-color: white;
+  width: "3px";
+}
+
+/* 👇 YOUR CODE HERE 👇 */
+double-button {
+  border-style: double;
+  color: darkgray;
+  width: "3px";
+}
